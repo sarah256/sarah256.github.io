@@ -117,22 +117,22 @@ a.toplink:hover{
 }
 
 #resume{
-	width:100%;
+
 	background-color:#D8D8D8;
 	position:relative;
 }
 
 #projects{
-	height:1177px;
-	width:100%;
+
+	position:relative;
 }
 
 #portfolio{
 	height:1177px;
-	width:100%;
+
 }
 
 #contact{
-	height:1177px;
-	width:100%;
+
+	position:relative;
 }
