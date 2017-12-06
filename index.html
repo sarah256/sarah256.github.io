@@ -73,12 +73,61 @@
 	<a href="https://drive.google.com/a/bu.edu/file/d/1GYKOZ9_aK5ZUPECkFleKV8RzaOl9RDWH/view?usp=sharing" class="arrowbtn" style="color:white;">SEE RESUME ></a>
 </div>
 <div id="projects">
-	<div class="row">
+	<div class="row" style="padding-bottom:30px">
 		<div style="font-size:28px;padding-left:50px;padding-top:50px;">Projects</div>
+	</div>
+	<div class="row" style="padding-left: 50px;">
+		<div class="col-sm-4 col-center">
+			<div class="col-wrapper" style="text-align: left">
+				<img src="discord.jpg" height="200" style="padding-right: 30px;">
+				<div>Created a bot on Discord using C# in Visual Studio<br/>
+					<a href="https://github.com/sarah256/DiscordBot">See code</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-center">
+			<div class="col-wrapper" style="text-align: left">
+				<img src="Gospers_glider_gun.gif" height="200" style="padding-right: 30px;">
+				<div>A unique version of Conway's Game of Life using multiple colors<br/>
+					<a href="https://github.com/sarah256/ColorWar">See code</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-center">
+			<div class="col-wrapper" style="text-align: left">
+				<img src="ladybug.png" height="200" style="padding-right: 30px;">
+				<div>Children's game that won second place at a hackathon<br/>
+					<a href="https://github.com/sarah256/hackthegap">See code</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div id="portfolio">
+	<div class="row">
+		<div style="font-size:28px;padding-left:50px;padding-top:50px;">Portfolio</div><br/>
+	</div>
+	<div class="row">
+		<div style="font-size:18px;padding-left:50px;padding-top:10px;font-style:italic;">Click an image to expand!</div>
+	</div>
+	<div class="row" style="padding-left: 50px;padding-bottom:50px;">
+		<img class="myImg" src="sunset_tatooine.svg" alt="Star Wars Inspired Tatooine Vector Art" width="300" height="200" style="padding-right: 30px;">
+		<img class="myImg" src="cloudcity.svg" alt="Star Wars Inspired Cloud City Vector Art" width="300" height="200" style="padding-right: 30px;">
+		<img class="myImg" src="falcon.svg" alt="Star Wars Inspired Millenium Falcon Vector Art" width="300" height="200" style="padding-right: 30px;">
 
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- The Close Button -->
+		  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+		  <!-- Modal Content (The Image) -->
+		  <img class="modal-content" id="img01">
+
+		  <!-- Modal Caption (Image Text) -->
+		  <div id="caption"></div>
+		</div>
+	</div>
 </div>
 <div id="contact">
 	<img src="falcon.svg" alt="falcon">
@@ -93,6 +142,31 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
