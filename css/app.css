@@ -117,3 +117,17 @@ li.elem{
 #resume{
 	margin-top: 50px;
 }
+
+
+.pin-top {
+  position: relative;
+}
+
+.pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+  top:200px !important;
+}

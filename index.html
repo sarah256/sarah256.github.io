@@ -134,27 +134,45 @@
 	      </div>
 
 	    </div>
-	    <div class="col hide-on-small-only m3 l2">
-	      <ul class="section table-of-contents">
+	    <div class="col hide-on-small-only">
+		  <div class="pushpin-nav" id="pushpin-nav" data-target="resume">
+		  <ul class="section table-of-contents">
 	        <li><a href="#redhat">Red Hat</a></li>
 	        <li><a href="#spark">BU Spark!</a></li>
 	        <li><a href="#yprime">YPrime</a></li>
 	        <li><a href="#bhacks">BostonHacks</a></li>
 	        <li><a href="#shehacks">SheHacks</a></li>
-	      </ul>
+	      </ul></div>
 	    </div>
   </div>
 </div>
 
   <!--JavaScript at end of body for optimized loading-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://static.tumblr.com/qsifglb/mZjl87ts1/f8.js">
-  </script>
-  <script type="text/javascript">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://static.tumblr.com/qsifglb/mZjl87ts1/f8.js"></script>
+  <script>
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.scrollspy');
     var instances = M.ScrollSpy.init(elems);
   });
+
+
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.target').pushpin({
+    });
+});
+  $('.pushpin-nav').each(function() {
+    var $this = $(this);
+    var $target = $('#' + $(this).attr('data-target'));
+    $this.pushpin({
+      top: $target.offset().top,
+      bottom: $target.offset().top + $target.outerHeight() - $this.height()
+    });
+  });
+        
   </script>
   <script type="text/javascript">
 	snowStorm.snowColor = '#bbbbbb';
