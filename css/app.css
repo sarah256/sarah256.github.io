@@ -8,6 +8,26 @@ a.toplink:hover{
 	color:#B5838D;
 }
 
+a.lang-tag{
+	background-color:#D8E2DC;
+	border-radius: 25px;
+	color:white;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+a.tool-tag{
+	background-color:#FFE5D9;
+	border-radius: 25px;
+	color:white;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
 h2.name{
 	font-family: 'Overpass', sans-serif;
 	text-align:center;
@@ -16,6 +36,7 @@ h2.name{
 	padding-left:30px;
 	margin-top:10px;
 	color:#6D6875;
+	margin-right: 10px;
 }
 
 p.about{
@@ -24,6 +45,29 @@ p.about{
 	color:#B5838D;
 	margin-left:60px !important;
 	margin-top: 0px;
+}
+
+p.job{
+	font-size: 2rem;
+	color:#6D6875;
+}
+
+p.date{
+	font-family: 'Overpass', sans-serif;
+	color:#E5989B;
+}
+
+ul.desc{
+	font-family: 'Overpass Mono', monospace;
+	font-size: 1.1rem;
+	list-style-type: square !important;
+	color: #B5838D;
+}
+
+li.elem{
+	list-style-type: square !important;
+	margin-left: 15px;
+	margin-bottom: 5px;
 }
 
 .eevee{
@@ -59,3 +103,10 @@ p.about{
 	color:#B5838D;
 }
 
+#home{
+	padding-bottom:200px;
+}
+
+#resume{
+	margin-top: 50px;
+}
