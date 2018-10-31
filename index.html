@@ -5,6 +5,8 @@
 <link type="text/css" rel="stylesheet" href="css/app.css"/>
 
 <link href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
 
 <head>
 	<title>Sarah Rieger</title>
@@ -147,6 +149,77 @@
   </div>
 </div>
 
+
+<div id="projects">
+	<div class = "row" style="margin-top:200px">
+		<div class="col s1"></div>
+		<div class="col s1"><h2 class="header">Projects</h2></div>
+	</div>
+  <div class="row">
+  	<div class="col s2"></div>
+    <div class="col s4">
+      <div class="card-panel white">
+        <div class="card-content">
+          <span class="card-title project" style="color: black">Estuary</span><a class="btn-floating waves-effect waves-light lightpink" href="https://github.com/release-engineering/estuary-api" style="float:right"><i class="fab fa-github"></i></a><a class="btn-floating waves-effect waves-light lightpink" href="https://estuary-api.readthedocs.io/en/latest/" style="float:right;margin-right: 10px"><i class="fas fa-book"></i></a>
+          <p class="proj-desc">Estuary visualizes a build to release pipeline, with a focus on the automation of container rebuilds due to CVEs (security vulnerabilities). Hosted on OpenShift, it gathers data in real time from a message bus.</p>
+        </div>
+	    <p>
+	        <a class="lang-tag">&nbsp;&nbsp;Python&nbsp;&nbsp;</a>
+	        <a class="lang-tag">&nbsp;&nbsp;JavaScript&nbsp;&nbsp;</a>
+	        <a class="tool-tag">&nbsp;&nbsp;Neomodel&nbsp;&nbsp;</a>
+	        <a class="tool-tag">&nbsp;&nbsp;Neo4j&nbsp;&nbsp;</a>
+	        <a class="tool-tag">&nbsp;&nbsp;OpenShift&nbsp;&nbsp;</a>
+	    </p>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="card-panel white">
+        <div class="card-content">
+          <span class="card-title project" style="color: black">RefEd</span><a class="btn-floating waves-effect waves-light lightpink" href="https://github.com/vaibhav19sharma/RefEd" style="float:right"><i class="fab fa-github"></i></a>
+          <p class="proj-desc">An Android app developed with a team of students and professors as a supplemental educational platform for child refugees, with user profiles keeping track of progress in modules of various subjects.</p>
+        </div>
+	    <p>
+	        <a class="lang-tag">&nbsp;&nbsp;Java&nbsp;&nbsp;</a>
+	        <a class="tool-tag">&nbsp;&nbsp;Firebase&nbsp;&nbsp;</a>
+	        <a class="tool-tag">&nbsp;&nbsp;Android Studio&nbsp;&nbsp;</a>
+	        <a class="tool-tag">&nbsp;&nbsp;Git&nbsp;&nbsp;</a>
+	    </p>
+      </div>
+    </div>
+</div>
+    <div class="row">
+  		<div class="col s2"></div>
+	    <div class="col s4">
+	      <div class="card-panel white">
+	        <div class="card-content">
+	          <span class="card-title project" style="color: black">PikaRun</span><a class="btn-floating waves-effect waves-light lightpink" href="https://github.com/sarah256/InfiniteRunnerMinigame" style="float:right"><i class="fab fa-github"></i></a>
+	          <p class="proj-desc">A minigame in which the user plays as the Pokemon Pikachu in an infinite run, where Pikachu must jump over various obstacles.  Inspired by Google Chrome's Dino Minigame.</p>
+	        </div>
+		    <p>
+		        <a class="lang-tag">&nbsp;&nbsp;Python&nbsp;&nbsp;</a>
+		        <a class="tool-tag">&nbsp;&nbsp;Pygame&nbsp;&nbsp;</a>
+		    </p>
+	      </div>
+	    </div>
+    </div>
+  </div>
+
+
+<!--
+<div id="portfolio">
+	<div class = "row" style="margin-top:200px">
+		<div class="col s1"></div>
+		<div class="col s1"><h2 class="header">Portfolio</h2></div>
+	</div>
+	<img class="fade-img portfolio-img" src="img/cloudcity.svg">
+	<img class="fade-img portfolio-img" src="img/cloudcity.svg">
+	<img class="fade-img portfolio-img" src="img/cloudcity.svg">
+	<img class="fade-img portfolio-img" src="img/cloudcity.svg">
+	<img class="fade-img portfolio-img" src="img/cloudcity.svg">
+	<img class="fade-img portfolio-img" src="img/cloudcity.svg">
+
+</div>-->
+
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
@@ -171,6 +244,10 @@
       top: $target.offset().top,
       bottom: $target.offset().top + $target.outerHeight() - $this.height()
     });
+  });
+
+   $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
   });
         
   </script>
