@@ -1,0 +1,61 @@
+a.toplink{
+	text-align:center;
+	word-spacing:.4em;
+	color:#E5989B;
+}
+
+a.toplink:hover{
+	color:#B5838D;
+}
+
+h2.name{
+	font-family: 'Overpass', sans-serif;
+	text-align:center;
+	font-size: 2rem;
+	float:left;
+	padding-left:30px;
+	margin-top:10px;
+	color:#6D6875;
+}
+
+p.about{
+	font-family: 'Overpass', sans-serif;
+	font-size: 2rem;
+	color:#B5838D;
+	margin-left:60px !important;
+	margin-top: 0px;
+}
+
+.eevee{
+	margin-left: 165px;
+	width: 105px;
+}
+
+.hello{
+	margin-left:60px !important;
+	font-size: 5rem;
+	margin-top: 20px;
+	color:#6D6875;
+}
+
+#header{
+	position:fixed;
+	top:0;
+	left:0;
+	text-align:center;
+	background-color: white;
+	z-index:1000;
+	width:100%;
+	padding-bottom:10px;
+	padding-top: 10px;
+}
+
+#nav{
+	text-align:center;
+	float:right;
+	padding-right:30px;
+	padding-top:15px;
+	font-family: 'Overpass', sans-serif;
+	color:#B5838D;
+}
+
