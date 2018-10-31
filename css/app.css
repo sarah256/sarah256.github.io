@@ -82,6 +82,13 @@ li.elem{
 	color:#6D6875;
 }
 
+.header{
+	margin-left:60px !important;
+	font-size: 3rem;
+	margin-top: 20px;
+	color:#6D6875;
+}
+
 #header{
 	position:fixed;
 	top:0;
