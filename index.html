@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
+<link type="text/css" rel="stylesheet" href="css/app.css"/>
 
+<link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="app.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/typeit@4.4.1/dist/typeit.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
 <head>
 	<title>Sarah Rieger</title>
-	<link rel="icon" href="yoda-8bit.png">
+	<link rel="icon" href="img/yoda-8bit.png">
 </head>
 <body>
 <div id="header">
@@ -32,151 +23,52 @@
 		<a class="toplink" href="#contact">contact</a>
 	</div>
 </div>
-<div id="hello">
-<!-- 	<img src="desktop_Desktop 1.svg" alt="dsktp" align="middle" class="dsktp">
-	<div class="centered" id="helloworld" style="bottom:100px;"></div> -->
-	<img src="sunset_tatooine2.svg" alt="sunset">
-	<div class="centered helloheader">Hello there!</div>
-	<div class="centered desc1">I'm Sarah, a sophomore student at Boston University studying computer science. I grew up in eastern Pennsylvania, with a passion for technology, art, and problem solving.</div>
-	<a href="#projects" class="arrowbtn" style="color:#feffb3;">SEE PROJECTS ></a>
-</div>
-<!-- <div id="transition-1"> -->
-<!-- 	<img src="desktop_Desktop 1.svg" alt="dsktp" align="middle" class="dsktp">
-	<div class="centered" id="helloworld" style="bottom:100px;"></div> -->
-<!-- 		<img src="transition-1.svg" alt="transition-1" width=100%>
-</div> -->
-<div id="about">
+<div id="home">
+	<div class = "row" style="margin-top:200px">
+		<div class="col s1"></div>
+		<div class="col s1"><h2 class="hello">Hello!</h2></div>
+		<div class="col s2"><a><img class="eevee" src="img/eevee.gif"></a></div>
+	</div>
 	<div class="row">
-		<div class="col-sm-4 col-center">
-			<div class="col-wrapper">
-			<img src="Untitled-8_Pencil.svg" style="left:50%">
-			<div class="col-title">Designer</div>
-			</div>
-			<p class="col-desc">Designing is something I truly enjoy, and in a variety of formats. The art on this site, for example, is my own. I am also on multiple website design teams for different hackathons. But I also love to design things conceptually, be it for software or something else entirely.</p>
-		</div>
-		<div class="col-sm-4 col-center">
-			<div class="col-wrapper">
-			<img src="Untitled-8_Computer.svg" style="left:50%">
-			<div class="col-title">Developer</div>
-			</div>
-			<p class="col-desc">I love being able to translate ideas into working software, websites, and other applications. Development excites me the most because I get to implement my ideas and designs into something useful. I have already had the privilege of helping people through medical software, and aim to continue to create useful products in a variety of fields.</p>
-		</div>
-		<div class="col-sm-4 col-center">
-			<div class="col-wrapper">
-			<img src="Untitled-8_Message Bubble.svg" style="left:50%">
-			<div class="col-title">Organizer</div>
-			</div>
-			<p class="col-desc">Getting involved in groups that share my passion is really important to me. I am an organizer for two different hackathons: BostonHacks, a hackathon run by BU students, and SheHacks Boston, the world's largest all-female and non-binary hackathon.</p>
+		<div class="col s1"></div>
+		<div class="col s8">
+			<p class="about">My name is Sarah Rieger. I'm a Boston-based computer science student specializing in software engineering. Currently working at Red Hat as a DevOps Software Engineer Intern.</p>
 		</div>
 	</div>
 </div>
 <div id="resume">
-	<img src="cloudcity.svg" alt="cloudcity">
-	<a href="https://drive.google.com/file/d/1DLbyj8K33_HjijJRhg-a_tqKp4S5GMVv/view?usp=sharing" class="arrowbtn" style="color:white;">SEE RESUME ></a>
-</div>
-<div id="projects">
-	<div class="row" style="padding-bottom:30px">
-		<div style="font-size:28px;padding-left:50px;padding-top:50px;">Projects</div>
-	</div>
-	<div class="row" style="padding-left: 50px;">
-		<div class="col-sm-3 col-center">
-			<div class="col-wrapper" style="text-align: left">
-				<img src="logorefed.png" height="200" style="padding-right: 30px;">
-				<div>Android app as a supplemental educational platform for child refugees.<br/>
-					<a href="https://github.com/vaibhav19sharma/RefEd">See code</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3 col-center">
-			<div class="col-wrapper" style="text-align: left">
-				<img src="discord.jpg" height="200" style="padding-right: 30px;">
-				<div>Created a bot on Discord using C# in Visual Studio<br/>
-					<a href="https://github.com/sarah256/DiscordBot">See code</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3 col-center">
-			<div class="col-wrapper" style="text-align: left">
-				<img src="Gospers_glider_gun.gif" height="200" style="padding-right: 30px;">
-				<div>A unique version of Conway's Game of Life using multiple colors<br/>
-					<a href="https://github.com/sarah256/ColorWar">See code</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3 col-center">
-			<div class="col-wrapper" style="text-align: left">
-				<img src="ladybug.png" height="200" style="padding-right: 30px;">
-				<div>Children's game that won second place at a hackathon<br/>
-					<a href="https://github.com/sarah256/hackthegap">See code</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="portfolio">
 	<div class="row">
-		<div style="font-size:28px;padding-left:50px;padding-top:50px;">Portfolio</div><br/>
-	</div>
-	<div class="row">
-		<div style="font-size:18px;padding-left:50px;padding-top:10px;font-style:italic;">Click an image to expand!</div>
-	</div>
-	<div class="row" style="padding-left: 50px;padding-bottom:50px;">
-		<img class="myImg" src="sunset_tatooine.svg" alt="Star Wars Inspired Tatooine Vector Art" width="300" height="200" style="padding-right: 30px;">
-		<img class="myImg" src="cloudcity.svg" alt="Star Wars Inspired Cloud City Vector Art" width="300" height="200" style="padding-right: 30px;">
-		<img class="myImg" src="falcon.svg" alt="Star Wars Inspired Millenium Falcon Vector Art" width="300" height="200" style="padding-right: 30px;">
-		<img class="myImg" src="museumwireframe.png" alt="Wireframe for BostonHacks Website" width="300" height="200" style="padding-right: 30px;">
+		<div class="col s12 m4 l3"></div>
+	    <div class="col s12 m4 l4">
+	      <div id="redhat" class="section scrollspy">
+	        <p>Red Hat, <i>DevOps Software Engineer Intern</i> </p>
+	      </div>
 
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
+	      <div id="spark" class="section scrollspy">
+	        <p>BU Spark!, <i>Consultant and Developer</i> </p>
+	      </div>
 
-		  <!-- The Close Button -->
-		  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-
-		  <!-- Modal Content (The Image) -->
-		  <img class="modal-content" id="img01">
-
-		  <!-- Modal Caption (Image Text) -->
-		  <div id="caption"></div>
-		</div>
-	</div>
+	      <div id="yprime" class="section scrollspy">
+	        <p>YPrime, <i>Junior Software Developer</i> </p>
+	      </div>
+	    </div>
+	    <div class="col hide-on-small-only m3 l2">
+	      <ul class="section table-of-contents">
+	        <li><a href="#redhat">Red Hat</a></li>
+	        <li><a href="#spark">BU Spark!</a></li>
+	        <li><a href="#yprime">YPrime</a></li>
+	      </ul>
+	    </div>
+  </div>
 </div>
-<div id="contact">
-	<img src="falcon.svg" alt="falcon">
-	<div class="centered" style="background-color: black; width:220px; height:190px;left:70%;top:40%">
-		<div class="centered" style="position:relative;font-size:48px">Contact</div>
-		<div class="centered" style="position:relative;top:25%;font-family: 'Fira Sans', sans-serif;font-size: 20px;">Email: <a href="mailto:srieger@bu.edu" style="color:#99e6ff">srieger@bu.edu</a> </div>
-		<a href="https://github.com/sarah256"><img src="github.svg" alt="github" style="width:20%;padding-top:60px;"></a>
-		<a href="https://www.linkedin.com/in/sarah-rieger-66617a145/"><img src="linkedin.svg" alt="linkedin" style="width:20%;padding-top:60px;padding-left:20px;"></a>
-	</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-	// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = $('.myImg');
-var modalImg = $("#img01");
-var captionText = document.getElementById("caption");
-$('.myImg').click(function(){
-    modal.style.display = "block";
-    var newSrc = this.src;
-    modalImg.attr('src', newSrc);
-    captionText.innerHTML = this.alt;
-});
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-</script>
-
-</body>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://static.tumblr.com/qsifglb/mZjl87ts1/f8.js">
+  </script>
+  <script type="text/javascript">
+	snowStorm.snowColor = '#bbbbbb';
+	snowStorm.flakesMaxActive = 30; 
+  </script>
+  </body>
 </html>
