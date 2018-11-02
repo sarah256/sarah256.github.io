@@ -4,4 +4,4 @@ Hello there!
 
 This is my personal site.  It is built using Materialize and is hosted on Github Pages.
 
-Check it out [here](www.sarahrieger.net)!
+Check it out [here](http://www.sarahrieger.net)!
