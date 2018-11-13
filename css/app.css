@@ -38,6 +38,7 @@ a.lang-tag{
 	padding-bottom: 2px;
 	margin-right: 5px;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 a.tool-tag{
@@ -48,6 +49,7 @@ a.tool-tag{
 	padding-bottom: 2px;
 	margin-right: 5px;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 h2.name{
@@ -77,6 +79,10 @@ p.job{
 p.date{
 	font-family: 'Overpass', sans-serif;
 	color:#E5989B;
+}
+
+p.tags{
+	line-height: 2;
 }
 
 ul.desc{
