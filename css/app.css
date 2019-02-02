@@ -235,3 +235,7 @@ li.elem{
 	margin-left:15px;
 	border-radius: 25px;
 }
+
+.card-content p {
+	font-size: .8rem;
+}
