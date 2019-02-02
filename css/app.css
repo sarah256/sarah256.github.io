@@ -20,6 +20,32 @@
 	color:#B5838D;
 }
 
+@media (max-width: 750px) {
+  .mobileFont3 {
+  	font-size: 3rem !important;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+}
+
+/*
+@media only screen and (max-width: 601px) {
+  .mobileHide {
+    display: none !important;
+  }
+  .mobileFont3 {
+  	font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 602px){
+  .desktopHide {
+    display: none !important;
+  }
+}*/
+
 a.toplink{
 	text-align:center;
 	word-spacing:.4em;
@@ -65,7 +91,7 @@ h2.name{
 
 p.about{
 	font-family: 'Overpass', sans-serif;
-	font-size: 2rem;
+	font-size: 2rem !important;
 	color:#B5838D;
 	margin-left:60px !important;
 	margin-top: 0px;
@@ -208,4 +234,8 @@ li.elem{
 .custom-btn{
 	margin-left:15px;
 	border-radius: 25px;
+}
+
+.card-content p {
+	font-size: .8rem;
 }
