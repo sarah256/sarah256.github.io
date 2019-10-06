@@ -208,6 +208,11 @@ li.elem{
 	color: #B5838D !important;
 }
 
+.proj-role{
+	font-family: 'Overpass Mono', monospace;
+	color: #B5838D !important;
+}
+
 .proj-desc{
 	font-family: 'Overpass Mono', monospace;
 	color: #6D6875 !important;
