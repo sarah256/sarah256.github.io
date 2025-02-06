@@ -20,6 +20,16 @@
 	color:#B5838D;
 }
 
+.nav-icon{
+	color:#E5989B;
+	margin-right: 10px;
+	font-size: 1rem;
+}
+
+.nav-icon:hover{
+	color:#B5838D;
+}
+
 @media (max-width: 750px) {
   .mobileFont3 {
   	font-size: 3rem !important;
@@ -168,10 +178,10 @@ li.elem{
 	padding-bottom:200px;
 }
 
-#resume{
-	margin-top: 50px;
+.pic{
+	margin-left: 20px;
+	width: 100px;
 }
-
 
 .pin-top {
   position: relative;
