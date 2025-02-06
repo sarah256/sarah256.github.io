@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
+<link type="text/css" rel="stylesheet" href="css/app.css"/>
+
+<link href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+
+<head>
+	<title>Sarah Rieger</title>
+	<link rel="icon" href="img/yoda-8bit.png">
+</head>
+<body>
+    <div id="header">
+        <h2 class="name">SARAH RIEGER</h2>
+        <div id="nav">
+            <a class="toplink" href="index.html">home</a>&nbsp;&nbsp; | &nbsp; 
+            <a class="toplink" href="programming.html">programming</a>&nbsp;&nbsp; | &nbsp;
+            <a class="toplink" href="portfolio.html">design</a>&nbsp;&nbsp; | &nbsp;  
+            <a class="toplink" href="resume.html">resume</a>&nbsp;&nbsp; | &nbsp;  
+            <a href="https://github.com/sarah256" class="nav-icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sarah-rieger-66617a145/" class="nav-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:srieger256@gmail.com" class="nav-icon" target="_blank"><i class="fas fa-envelope-square"></i></a>
+        </div>
+    </div>
+
+    <img class="pic" src="img/kyklos banner.png">
+    <img class="pic" src="img/umibozu2.png">
+    <img class="pic" src="img/cloudcity.svg">
+    <img class="pic" src="img/cute-umi.png">
+    <img class="pic" src="img/jellyfish-pokemon-sticker2.png">
+    <img class="pic" src="img/leo-logo-glasses.png">
+    <img class="pic" src="img/falcon.svg">
+    <img class="pic" src="img/kyklos-logo-blush-bkg.png">
+    <img class="pic" src="img/sunset_tatooine2.svg">
+    <img class="pic" src="img/yoda-8bit.svg">
+    <img class="pic" src="img/starwars8bit.svg">
+    <img class="pic" src="img/starwars8bit_bb8.svg">
+    <img class="pic" src="img/sc_default-banner.png">
+    <img class="pic" src="img/sc_food-banner-long.png">
+    <img class="pic" src="img/sc_housing-banner.png">
+    <img class="pic" src="img/spare-change-logo.png">
+    <img class="pic" src="img/onboarding-flow-bar-graph.svg">
+    <img class="pic" src="img/onboarding-flow-giving-change.svg">
+    <img class="pic" src="img/onboarding-flow-rocket.svg">
+
+<div id="footer">
+	<p><a href="https://github.com/sarah256" style="color:white">Designed & Built by Sarah Rieger</a></p>
+</div>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://static.tumblr.com/qsifglb/mZjl87ts1/f8.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.scrollspy');
+    var instances = M.ScrollSpy.init(elems);
+  });
+
+
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.target').pushpin({
+    });
+});
+  $('.pushpin-nav').each(function() {
+    var $this = $(this);
+    var $target = $('#' + $(this).attr('data-target'));
+    $this.pushpin({
+      top: $target.offset().top,
+      bottom: $target.offset().top + $target.outerHeight() - $this.height()
+    });
+  });
+
+   $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+        
+  </script>
+  <script type="text/javascript">
+	snowStorm.snowColor = '#bbbbbb';
+	snowStorm.flakesMaxActive = 30; 
+  </script>
+  </body>
+</html>
