@@ -209,10 +209,6 @@ li.elem{
   -webkit-transform: scale(1.01);
 }
 
-.portfolio-img{
-	height:300px;
-}
-
 .project{
 	font-size: 2rem;
 	color: #B5838D !important;
@@ -253,4 +249,46 @@ li.elem{
 
 .card-content p {
 	font-size: .8rem;
+}
+
+.portfolio-container {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+}
+
+.portfolio-card {
+	width: 100%;
+	margin-bottom: 20px;
+	display: none;
+}
+
+.portfolio-img {
+	width: 100%;
+}
+
+.portfolio-txt {
+	padding-bottom: 2.5em;
+}
+
+.show-img {
+	display: block;
+}
+
+.img-title {
+	float: left;
+	font-weight: bold;
+}
+
+.img-medium {
+	float: right;
+	font-style: italic;
+}
+
+.filter-container {
+	margin-left: 10%;
+	position: fixed;
+	height: 3em;
+	background-color: white;
+	width: 100%;
 }
