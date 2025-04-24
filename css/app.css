@@ -6,6 +6,22 @@
 	background-color:#B5838D;
 }
 
+.dark-green {
+	color: #1d6330;
+}
+
+.medium-green {
+	color:#2f9c4c;
+}
+
+.light-green {
+	color: #7ef79f;
+}
+
+.lightest-green {
+	color: #c9f5d5;
+}
+
 .icons{
 	font-size: 2.5rem;
 	margin-left: 65px;
