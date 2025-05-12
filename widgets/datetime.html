@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date and time</title>
+    <style>
+        h1 {
+            color: green;
+        }
+
+        time {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>GeeksforGeeks</h1>
+    <h3>Approach 2: Using &lt;time&gt; Tag with JavaScript</h3>
+    <time id="current-time"></time>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('current-time');
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            timeElement.dateTime = now.toISOString();
+            timeElement.innerHTML = `Today is: ${now.toLocaleDateString(undefined, options)}, 
+                                     Time: ${now.toLocaleTimeString()}`;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
+</body>
+
+</html>
