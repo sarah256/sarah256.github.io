@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f7;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #1d1d1f;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .widget-container {
+            width: 600px;
+            height: 600px;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 0 auto;
+        }
+
+        .content-wrapper {
+            padding: 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .page-title h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            font-size: 14px;
+            color: #86868b;
+            margin: 0;
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            flex: 1;
+        }
+
+        .dropdown-toggle {
+            background: #f5f5f7 !important;
+            border: none !important;
+            color: #1d1d1f !important;
+            padding: 8px 16px !important;
+            border-radius: 12px !important;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+            width: 100%;
+            text-align: left;
+        }
+
+        .dropdown-toggle:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            padding: 8px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .dropdown-item {
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: #1d1d1f;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f5f5f7;
+            transform: translateX(4px);
+        }
+
+        .recipe-card {
+            flex: 1;
+            background: #f5f5f7;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #recipeImage {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #86868b;
+            margin-bottom: 16px;
+        }
+
+        #recipeLink {
+            background: #0071e3;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        #recipeLink:hover {
+            background: #0077ed;
+            transform: translateY(-1px);
+        }
+
+        /* Animation styles */
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(10px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-out {
+            animation: fadeOut 0.3s ease-out forwards;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="widget-container">
+        <div class="content-wrapper">
+
+            <div class="filters-row">
+                <div class="filter-group">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="cuisineDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Cuisine
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="cuisineDropdown" id="cuisineMenu">
+                            <a class="dropdown-item" href="#" data-value="all">All Cuisines</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="mealDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Meal
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="mealDropdown" id="mealMenu">
+                            <a class="dropdown-item" href="#" data-value="all">All Meals</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Category
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="categoryDropdown" id="categoryMenu">
+                            <a class="dropdown-item" href="#" data-value="all">All Categories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card" id="recipeDisplay">
+                <img id="recipeImage" class="card-img-top" alt="Recipe Image">
+                <div class="recipe-content">
+                    <h5 class="card-title" id="recipeName"></h5>
+                    <p class="card-text" id="recipeDetails"></p>
+                    <a href="#" id="recipeLink" class="btn btn-primary" target="_blank">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        const recipes = [
+            {
+                "name": "Black bean enchiladas",
+                "site_name": "loveandlemons.com",
+                "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2016/12/IMG_2015_04_24_04353-2.jpg",
+                "link": "https://www.loveandlemons.com/vegetarian-enchiladas/",
+                "category": "Vegetarian",
+                "cuisine": "Mexican",
+                "meal": "Dinner"
+            },
+            {
+                "name": "Breakfast burritos",
+                "site_name": "loveandlemons.com",
+                "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2016/12/IMG_2015_04_24_04353-2.jpg",
+                "link": "https://www.loveandlemons.com/breakfast-burrito/",
+                "category": "Vegetarian",
+                "cuisine": "Mexican",
+                "meal": "Breakfast"
+            },
+            {
+                "name": "Shakshuka",
+                "site_name": "loveandlemons.com",
+                "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2017/01/shakshuka.jpg",
+                "link": "https://www.loveandlemons.com/shakshuka-recipe/",
+                "category": "Vegetarian",
+                "cuisine": "African",
+                "meal": "Breakfast"
+            },
+            {
+                "name": "Vegetarian tostadas",
+                "site_name": "loveandlemons.com",
+                "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2025/04/311_LLBlogJan_TostadaPickedPeppers_66564.jpg",
+                "link": "https://www.loveandlemons.com/tostada-recipe/",
+                "category": "Vegetarian",
+                "cuisine": "Mexican",
+                "meal": "Dinner"
+            },
+            {
+                "name": "Sheet Pan Lemon-Herb Salmon with Asparagus",
+                "site_name": "kalejunkie.com",
+                "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2025/04/311_LLBlogJan_TostadaPickedPeppers_66564.jpg",
+                "link": "https://kalejunkie.com/sheet-pan-lemon-herb-salmon-with-asparagus/",
+                "category": "Fish",
+                "cuisine": "American",
+                "meal": "Dinner"
+            },
+            {
+                "name": "High protein marry me chicken",
+                "site_name": "delish.com",
+                "img_url": "https://hips.hearstapps.com/hmg-prod/images/high-protein-marry-me-chicken-lead-677d3feb566de.jpg?crop=1xw:1xh;center,top&resize=640:*",
+                "link": "https://www.delish.com/cooking/recipe-ideas/a63352296/high-protein-marry-me-chicken-recipe/",
+                "category": "Chicken",
+                "cuisine": "American",
+                "meal": "Dinner"
+            },
+            {
+                "name": "Fried rice",
+                "site_name": "gimmesomeoven.com",
+                "img_url": "https://www.gimmesomeoven.com/wp-content/uploads/2017/07/How-To-Make-Fried-Rice-Recipe-2-1.jpg",
+                "link": "https://www.gimmesomeoven.com/fried-rice-recipe/#tasty-recipes-62154",
+                "category": "Vegetarian",
+                "cuisine": "Chinese",
+                "meal": "Dinner"
+            }
+        ];
+
+        // Get unique values for each filter
+        const getUniqueValues = (arr, key) => [...new Set(arr.map(item => item[key]))];
+
+        // Current filter values
+        let currentFilters = {
+            cuisine: 'all',
+            meal: 'all',
+            category: 'all'
+        };
+
+        // Populate dropdowns
+        function populateDropdowns() {
+            const cuisines = getUniqueValues(recipes, 'cuisine');
+            const meals = getUniqueValues(recipes, 'meal');
+            const categories = getUniqueValues(recipes, 'category');
+
+            cuisines.forEach(cuisine => {
+                document.getElementById('cuisineMenu').innerHTML += `
+                    <a class="dropdown-item" href="#" data-value="${cuisine}">${cuisine}</a>
+                `;
+            });
+
+            meals.forEach(meal => {
+                document.getElementById('mealMenu').innerHTML += `
+                    <a class="dropdown-item" href="#" data-value="${meal}">${meal}</a>
+                `;
+            });
+
+            categories.forEach(category => {
+                document.getElementById('categoryMenu').innerHTML += `
+                    <a class="dropdown-item" href="#" data-value="${category}">${category}</a>
+                `;
+            });
+        }
+
+        // Filter recipes based on current selections
+        function filterRecipes() {
+            let filteredRecipes = recipes.filter(recipe => {
+                const matchesCuisine = currentFilters.cuisine === 'all' || recipe.cuisine === currentFilters.cuisine;
+                const matchesMeal = currentFilters.meal === 'all' || recipe.meal === currentFilters.meal;
+                const matchesCategory = currentFilters.category === 'all' || recipe.category === currentFilters.category;
+                return matchesCuisine && matchesMeal && matchesCategory;
+            });
+
+            // Display a random recipe from filtered results
+            if (filteredRecipes.length > 0) {
+                const randomIndex = Math.floor(Math.random() * filteredRecipes.length);
+                const selectedRecipe = filteredRecipes[randomIndex];
+                displayRecipe(selectedRecipe);
+            } else {
+                displayNoResults();
+            }
+        }
+
+        // Display recipe in the card
+        function displayRecipe(recipe) {
+            const recipeCard = document.getElementById('recipeDisplay');
+            
+            // Start fade out
+            recipeCard.classList.add('fade-out');
+            
+            setTimeout(() => {
+                // Update content while faded out
+                document.getElementById('recipeName').textContent = recipe.name;
+                document.getElementById('recipeDetails').textContent = `${recipe.cuisine} · ${recipe.category} · ${recipe.meal}`;
+                document.getElementById('recipeLink').href = recipe.link;
+                document.getElementById('recipeImage').src = recipe.img_url;
+                document.getElementById('recipeImage').alt = recipe.name;
+                document.getElementById('recipeDisplay').style.display = 'block';
+                document.getElementById('recipeLink').style.display = 'block';
+                
+                // Remove fade out and add fade in
+                recipeCard.classList.remove('fade-out');
+                recipeCard.classList.add('fade-in');
+                
+                // Clean up animation classes
+                setTimeout(() => {
+                    recipeCard.classList.remove('fade-in');
+                }, 300);
+            }, 300);
+        }
+
+        // Display no results message
+        function displayNoResults() {
+            const recipeCard = document.getElementById('recipeDisplay');
+            
+            // Start fade out
+            recipeCard.classList.add('fade-out');
+            
+            setTimeout(() => {
+                // Update content while faded out
+                document.getElementById('recipeName').textContent = 'No recipes found';
+                document.getElementById('recipeDetails').textContent = 'Try different filter combinations';
+                document.getElementById('recipeImage').src = '';
+                document.getElementById('recipeImage').alt = 'No recipe found';
+                document.getElementById('recipeLink').style.display = 'none';
+                
+                // Remove fade out and add fade in
+                recipeCard.classList.remove('fade-out');
+                recipeCard.classList.add('fade-in');
+                
+                // Clean up animation classes
+                setTimeout(() => {
+                    recipeCard.classList.remove('fade-in');
+                }, 300);
+            }, 300);
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            populateDropdowns();
+
+            // Add click handlers for dropdown items
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('dropdown-item')) {
+                        e.preventDefault();
+                        const value = e.target.dataset.value;
+                        const dropdownId = this.getAttribute('aria-labelledby');
+                        document.getElementById(dropdownId).textContent = e.target.textContent;
+                        
+                        // Update filters based on which dropdown was clicked
+                        if (dropdownId === 'cuisineDropdown') {
+                            currentFilters.cuisine = value;
+                        } else if (dropdownId === 'mealDropdown') {
+                            currentFilters.meal = value;
+                        } else if (dropdownId === 'categoryDropdown') {
+                            currentFilters.category = value;
+                        }
+
+                        filterRecipes();
+                    }
+                });
+            });
+
+            // Initial filter
+            filterRecipes();
+        });
+    </script>
+</body>
+
+</html>
