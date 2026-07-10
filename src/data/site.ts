@@ -5,6 +5,7 @@ export const site = {
   links: {
     github: 'https://github.com/sarah256',
     linkedin: 'https://www.linkedin.com/in/sarah-rieger-66617a145/',
+    resumePdf: '/sarah-rieger_resume-2026.pdf',
   },
 } as const
 

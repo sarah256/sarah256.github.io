@@ -60,6 +60,13 @@ export function ResumePage() {
             >
               View LinkedIn
             </a>
+            <a
+              href={site.links.resumePdf}
+              className={styles.downloadBtn}
+              download="Sarah-Rieger-Resume-2026.pdf"
+            >
+              Download Resume
+            </a>
           </aside>
         </div>
       </section>

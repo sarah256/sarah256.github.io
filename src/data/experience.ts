@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     title: 'Senior Software Engineer / Software Engineering Team Lead',
     dates: 'May 2021 – May 2026',
     bullets: [
-      'Architected and operationalized a scalable AI tooling system embedded within the company’s core application, designed to support high volumes of data and queries', 'Built and led a second team from the ground up',
+      'Architected and operationalized a scalable AI tooling system embedded within the company’s core application, designed to support high volumes of data and queries',
       'Founded and led a team from the ground up to create our second product, which directly contributes to a 30% retention increase in our customer base',
       'Led and developed the process around a new on call rotation, along with revitalized documentation that is much more accessible, reducing incoming support requests by about 20%',
       'Founded and led a second team with the mission to substantially increase TAM by introducing a new version of our core product offering to support a wider variety of data ingestion',
