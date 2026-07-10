@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
@@ -41,6 +42,11 @@ function legacyAssetsPlugin(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), legacyAssetsPlugin()],
+  plugins: [react(), tailwindcss(), legacyAssetsPlugin()],
+  resolve: {
+    alias: {
+      '@': path.join(rootDir, 'src'),
+    },
+  },
   base: '/',
 })

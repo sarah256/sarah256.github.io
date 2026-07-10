@@ -25,6 +25,11 @@
   color: var(--color-accent);
 }
 
+.type {
+  color: var(--color-muted);
+  text-transform: lowercase;
+}
+
 .description {
   margin: 0;
   font-family: var(--font-mono);

@@ -35,7 +35,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
         </div>
-        <p className={styles.role}>{project.role}</p>
+        <p className={styles.role}>
+          {project.role}
+          <span className={styles.type}> · {project.type}</span>
+        </p>
         <p className={styles.description}>{project.description}</p>
         <Tags languages={project.languages} tools={project.tools} />
       </div>

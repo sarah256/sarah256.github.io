@@ -27,7 +27,7 @@ jobs:
 
       - run: npm ci
       - run: npm run build
-      - run: cp -r img img2 CNAME dist/
+      - run: cp -r img img2 CNAME programming.html portfolio.html resume.html dist/
 
       - uses: actions/upload-pages-artifact@v3
         with:
