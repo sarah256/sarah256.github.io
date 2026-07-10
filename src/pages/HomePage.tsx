@@ -15,12 +15,8 @@ export function HomePage() {
 
         <TerminalWindow title="~/about.txt">
           <p className={styles.bio}>
-            My name is Sarah Rieger. I'm a Brooklyn-based software engineer, and I do freelance
-            design and site building in my free time! Currently working at{' '}
-            <a href="https://jellyfish.co" target="_blank" rel="noreferrer">
-              Jellyfish
-            </a>{' '}
-            as a Software Engineering Team Lead.
+            My name is Sarah Rieger. I'm a Brooklyn-based software engineer with a passion for
+            product-focused development and design.
           </p>
           <SocialLinks variant="home" />
         </TerminalWindow>
