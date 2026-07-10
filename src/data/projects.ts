@@ -4,7 +4,7 @@ export interface ProjectLink {
   label?: string
 }
 
-export type ProjectType = 'professional' | 'personal' | 'hackathon'
+export type ProjectType = 'professional' | 'personal' | 'hackathon' | 'school'
 
 export interface Project {
   id: string
@@ -22,9 +22,23 @@ export const projectTypes: { id: ProjectType | 'all'; label: string }[] = [
   { id: 'professional', label: 'professional' },
   { id: 'personal', label: 'personal' },
   { id: 'hackathon', label: 'hackathon' },
+  { id: 'school', label: 'school' },
 ]
 
 export const projects: Project[] = [
+  {
+    id: 'devfinops',
+    name: 'DevFinOps',
+    role: 'Lead Developer',
+    type: 'professional',
+    description:
+      'DevFinOps is an industry-leading cost capitalization software product. It helps businesses track and optimize their costs, and provides insights into their cost structure.',
+    languages: ['Python', 'TypeScript'],
+    tools: ['React', 'Django', 'Pandas', 'S3'],
+    links: [
+      { type: 'website', url: 'https://jellyfish.co/solutions/software-capitalization/', label: 'Product Page' },
+    ],
+  },
   {
     id: 'estuary',
     name: 'Estuary',
@@ -54,37 +68,37 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'pikarun',
-    name: 'PikaRun',
-    role: 'Sole Developer',
-    type: 'personal',
-    description:
-      "A minigame in which the user plays as the Pokemon Pikachu in an infinite run, where Pikachu must jump over various obstacles to score points as he runs. Inspired by Google Chrome's Dinosaur Minigame.",
-    languages: ['Python'],
-    tools: ['Pygame'],
-    links: [{ type: 'github', url: 'https://github.com/sarah256/InfiniteRunnerMinigame' }],
-  },
-  {
-    id: 'giudice',
-    name: 'Giudice',
+    id: 'spade',
+    name: 'Spade',
     role: 'Lead Developer',
     type: 'professional',
     description:
-      'An automated web application to simplify judging at hackathons, it features automatic table and judge assignments to projects. A login for judges will soon be implemented, so projects can be judged directly in the app.',
+      "A Python script that identifies any modules that depend on others by parsing a module's ModuleMD and comparing it to the blacklist of modules. Written for RHEL/Fedora modules.",
     languages: ['Python'],
-    tools: ['Flask'],
-    links: [{ type: 'github', url: 'https://github.com/Bostonhacks/giudice' }],
+    tools: ['Python Requests'],
+    links: [{ type: 'github', url: 'https://github.com/sarah256/Spade' }],
   },
   {
-    id: 'fortune-api',
-    name: 'Fortune API',
+    id: 'numbear',
+    name: 'Numbear',
     role: 'Sole Developer',
     type: 'personal',
     description:
-      'A RESTful API written in Go, for the classic fortune command-line utility (in the fortune-mod package). It chooses a random fun fortune to give to the user.',
-    languages: ['Go'],
-    tools: [],
-    links: [{ type: 'github', url: 'https://github.com/sarah256/fortune-api' }],
+      'A daily puzzle game to challenge the user to build an equation with only a specific subset of numbers in order to hit the target number of the day.',
+    languages: ['Typescript'],
+    tools: ['React', 'Vite', 'Tailwind CSS', 'Express', 'Devvit'],
+    links: [{ type: 'website', url: 'https://www.reddit.com/r/NumBear/', label: 'Live game' }],
+  },
+  {
+    id: 'ai-news',
+    name: 'AI News Roundup',
+    role: 'Sole Developer',
+    type: 'personal',
+    description:
+      'Uses Claude / Anthropic API to process AI and tech newsletter emails and generate a weekly roundup spreadsheet with categorized, importance-rated updates.',
+    languages: ['Python'],
+    tools: ['AI', 'Anthropic API', 'Claude', 'Tailwind CSS', 'Express', 'Devvit'],
+    links: [{ type: 'github', url: 'https://github.com/sarah256/ai-news-roundup', label: 'Code' }],
   },
   {
     id: 'yo-setta-stone',
@@ -94,14 +108,14 @@ export const projects: Project[] = [
     description:
       'This application employs machine learning and natural language processing to evaluate the definition of slang words based on the context of the tweets they are used in.',
     languages: ['Python'],
-    tools: ['Flask', 'NLTK', 'Gensim'],
+    tools: ['AI', 'Flask', 'NLTK'],
     links: [{ type: 'github', url: 'https://github.com/sarah256/lingo-learner' }],
   },
   {
     id: 'museo',
     name: 'Museo',
     role: 'Core Developer',
-    type: 'professional',
+    type: 'school',
     description:
       'A "museum" website built for BostonHacks. It displays data from past events, and the history of BostonHacks.',
     languages: ['Ruby', 'JavaScript', 'HTML/CSS'],
@@ -112,10 +126,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'giudice',
+    name: 'Giudice',
+    role: 'Lead Developer',
+    type: 'school',
+    description:
+      'An automated web application to simplify judging at hackathons, it features automatic table and judge assignments to projects. A login for judges will soon be implemented, so projects can be judged directly in the app.',
+    languages: ['Python'],
+    tools: ['Flask'],
+    links: [{ type: 'github', url: 'https://github.com/Bostonhacks/giudice' }],
+  },
+  {
     id: 'shehacks-live-2018',
     name: 'SheHacks Live (v2018)',
     role: 'Core Developer',
-    type: 'professional',
+    type: 'school',
     description:
       'A "live" website for the SheHacks hackathon. It keeps participants informed while the event is underway.',
     languages: ['JavaScript', 'HTML/CSS'],
@@ -126,7 +151,7 @@ export const projects: Project[] = [
     id: 'bostonhacks-live-2017',
     name: 'BostonHacks Live (v2017)',
     role: 'Core Developer',
-    type: 'professional',
+    type: 'school',
     description:
       'A "live" website for the BostonHacks hackathon. It keeps participants informed while the event is underway.',
     languages: ['JavaScript', 'HTML/CSS'],
@@ -137,37 +162,12 @@ export const projects: Project[] = [
     id: 'bostonhacks-live-2018',
     name: 'BostonHacks Live (v2018)',
     role: 'Core Developer',
-    type: 'professional',
+    type: 'school',
     description:
       'A (remade for 2018) "live" website for the BostonHacks hackathon. It keeps participants informed while the event is underway.',
     languages: ['JavaScript', 'HTML/CSS'],
     tools: ['Vue.js'],
     links: [{ type: 'github', url: 'https://github.com/Bostonhacks/atteraggio-f18' }],
-  },
-  {
-    id: 'appleseed-crepe',
-    name: 'Appleseed Crepe Website',
-    role: 'Lead Developer',
-    type: 'professional',
-    description:
-      'A simple website built for the Appleseed Crepe and Bread restaurant, based in Massachusetts. It provides a menu and information on the restaurant itself.',
-    languages: ['JavaScript', 'HTML/CSS'],
-    tools: [],
-    links: [
-      { type: 'github', url: 'https://github.com/sarah256/AppleseedCrepe' },
-      { type: 'website', url: 'http://appleseedcrepe.com/', label: 'Website' },
-    ],
-  },
-  {
-    id: 'spade',
-    name: 'Spade',
-    role: 'Lead Developer',
-    type: 'professional',
-    description:
-      "A Python script that identifies any modules that depend on others by parsing a module's ModuleMD and comparing it to the blacklist of modules. Written for RHEL/Fedora modules.",
-    languages: ['Python'],
-    tools: ['Python Requests'],
-    links: [{ type: 'github', url: 'https://github.com/sarah256/Spade' }],
   },
 ]
 
