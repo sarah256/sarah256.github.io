@@ -25,9 +25,14 @@
   color: var(--color-accent);
 }
 
-.type {
+.type,
+.year {
   color: var(--color-muted);
   text-transform: lowercase;
+}
+
+.year {
+  text-transform: none;
 }
 
 .description {

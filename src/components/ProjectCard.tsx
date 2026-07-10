@@ -38,6 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className={styles.role}>
           {project.role}
           <span className={styles.type}> · {project.type}</span>
+          <span className={styles.year}> · {project.year}</span>
         </p>
         <p className={styles.description}>{project.description}</p>
         <Tags languages={project.languages} tools={project.tools} />

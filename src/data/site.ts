@@ -10,7 +10,7 @@ export const site = {
 
 export const navItems = [
   { label: 'home', path: '/' },
-  { label: 'programming', path: '/programming' },
+  { label: 'projects', path: '/projects' },
   { label: 'design', path: '/design' },
   { label: 'resume', path: '/resume' },
 ] as const

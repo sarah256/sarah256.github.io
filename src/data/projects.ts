@@ -11,6 +11,7 @@ export interface Project {
   name: string
   role: string
   type: ProjectType
+  year: number
   description: string
   languages: string[]
   tools: string[]
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     name: 'DevFinOps',
     role: 'Lead Developer',
     type: 'professional',
+    year: 2025,
     description:
       'DevFinOps is an industry-leading cost capitalization software product. It helps businesses track and optimize their costs, and provides insights into their cost structure.',
     languages: ['Python', 'TypeScript'],
@@ -44,6 +46,7 @@ export const projects: Project[] = [
     name: 'Estuary',
     role: 'Core Developer',
     type: 'professional',
+    year: 2019,
     description:
       'Estuary visualizes a build to release pipeline, with a focus on the automation of container rebuilds due to CVEs (security vulnerabilities). Hosted on OpenShift, it gathers data in real time from a message bus.',
     languages: ['Python', 'JavaScript'],
@@ -58,6 +61,7 @@ export const projects: Project[] = [
     name: 'RefEd',
     role: 'Core Developer',
     type: 'professional',
+    year: 2017,
     description:
       'An Android application developed with a team of students and professors as a supplemental educational platform for child refugees, with user profiles keeping track of progress in modules of various subjects.',
     languages: ['Java'],
@@ -72,6 +76,7 @@ export const projects: Project[] = [
     name: 'Spade',
     role: 'Lead Developer',
     type: 'professional',
+    year: 2019,
     description:
       "A Python script that identifies any modules that depend on others by parsing a module's ModuleMD and comparing it to the blacklist of modules. Written for RHEL/Fedora modules.",
     languages: ['Python'],
@@ -83,6 +88,7 @@ export const projects: Project[] = [
     name: 'Numbear',
     role: 'Sole Developer',
     type: 'personal',
+    year: 2026,
     description:
       'A daily puzzle game to challenge the user to build an equation with only a specific subset of numbers in order to hit the target number of the day.',
     languages: ['Typescript'],
@@ -94,6 +100,7 @@ export const projects: Project[] = [
     name: 'AI News Roundup',
     role: 'Sole Developer',
     type: 'personal',
+    year: 2025,
     description:
       'Uses Claude / Anthropic API to process AI and tech newsletter emails and generate a weekly roundup spreadsheet with categorized, importance-rated updates.',
     languages: ['Python'],
@@ -101,10 +108,37 @@ export const projects: Project[] = [
     links: [{ type: 'github', url: 'https://github.com/sarah256/ai-news-roundup', label: 'Code' }],
   },
   {
+    id: 'stock-tracker',
+    name: 'Stock Tracker',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2026,
+    description:
+      'An AI-agent-driven options trading analytics platform that gathers data from multiple sources, as well as leverages an LLM and mathematical formulas to evaluate potential options trading opportunities.',
+    languages: ['Python'],
+    tools: ['AI', 'Bedrock', 'AWS', 'MCP', 'Data science'],
+    links: [{ type: 'github', url: 'https://github.com/sarah256/blowhole', label: 'Code' }],
+  },
+  {
+    id: 'personal-website',
+    name: 'Personal Website',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2026,
+    description:
+      'My personal website - the one you\'re on right now!',
+    languages: ['TypeScript'],
+    tools: ['React', 'Vite', 'Tailwind CSS', 'Next.js'],
+    links: [{ type: 'github', url: 'https://github.com/sarah256/sarah256.github.io', label: 'Code' },
+    { type: 'website', url: 'https://sarahrieger.net', label: 'Website' },
+    ],
+  },
+  {
     id: 'yo-setta-stone',
     name: 'Yo-setta Stone',
     role: 'Lead Developer',
     type: 'hackathon',
+    year: 2017,
     description:
       'This application employs machine learning and natural language processing to evaluate the definition of slang words based on the context of the tweets they are used in.',
     languages: ['Python'],
@@ -116,6 +150,7 @@ export const projects: Project[] = [
     name: 'Museo',
     role: 'Core Developer',
     type: 'school',
+    year: 2018,
     description:
       'A "museum" website built for BostonHacks. It displays data from past events, and the history of BostonHacks.',
     languages: ['Ruby', 'JavaScript', 'HTML/CSS'],
@@ -130,6 +165,7 @@ export const projects: Project[] = [
     name: 'Giudice',
     role: 'Lead Developer',
     type: 'school',
+    year: 2017,
     description:
       'An automated web application to simplify judging at hackathons, it features automatic table and judge assignments to projects. A login for judges will soon be implemented, so projects can be judged directly in the app.',
     languages: ['Python'],
@@ -141,6 +177,7 @@ export const projects: Project[] = [
     name: 'SheHacks Live (v2018)',
     role: 'Core Developer',
     type: 'school',
+    year: 2018,
     description:
       'A "live" website for the SheHacks hackathon. It keeps participants informed while the event is underway.',
     languages: ['JavaScript', 'HTML/CSS'],
@@ -152,6 +189,7 @@ export const projects: Project[] = [
     name: 'BostonHacks Live (v2017)',
     role: 'Core Developer',
     type: 'school',
+    year: 2017,
     description:
       'A "live" website for the BostonHacks hackathon. It keeps participants informed while the event is underway.',
     languages: ['JavaScript', 'HTML/CSS'],
@@ -163,6 +201,7 @@ export const projects: Project[] = [
     name: 'BostonHacks Live (v2018)',
     role: 'Core Developer',
     type: 'school',
+    year: 2018,
     description:
       'A (remade for 2018) "live" website for the BostonHacks hackathon. It keeps participants informed while the event is underway.',
     languages: ['JavaScript', 'HTML/CSS'],
