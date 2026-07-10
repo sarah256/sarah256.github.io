@@ -68,7 +68,7 @@ export const projects: Project[] = [
     tools: ['Firebase', 'Android Studio'],
     links: [
       { type: 'github', url: 'https://github.com/vaibhav19sharma/RefEd' },
-      { type: 'facebook', url: 'https://www.facebook.com/refedinitiative/', label: 'Initiative' },
+      { type: 'facebook', url: 'https://www.facebook.com/refedinitiative/', label: 'Organization' },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     description:
       "A Python script that identifies any modules that depend on others by parsing a module's ModuleMD and comparing it to the blacklist of modules. Written for RHEL/Fedora modules.",
     languages: ['Python'],
-    tools: ['Python Requests'],
+    tools: [],
     links: [{ type: 'github', url: 'https://github.com/sarah256/Spade' }],
   },
   {
@@ -117,11 +117,11 @@ export const projects: Project[] = [
       'An AI-agent-driven options trading analytics platform that gathers data from multiple sources, as well as leverages an LLM and mathematical formulas to evaluate potential options trading opportunities.',
     languages: ['Python'],
     tools: ['AI', 'Bedrock', 'AWS', 'MCP', 'Data science'],
-    links: [{ type: 'github', url: 'https://github.com/sarah256/blowhole', label: 'Code' }],
+    links: [],
   },
   {
     id: 'personal-website',
-    name: 'Personal Website',
+    name: 'Personal Site',
     role: 'Sole Developer',
     type: 'personal',
     year: 2026,
