@@ -1,3 +1,4 @@
+import { ExternalLink } from 'lucide-react'
 import type { Project } from '../data/projects'
 import { TerminalWindow } from './TerminalWindow'
 import { Tags } from './Tag'
@@ -31,6 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 title={link.label}
               >
                 {link.label ?? linkLabels[link.type]}
+                <ExternalLink className={styles.linkIcon} aria-hidden="true" />
               </a>
             ))}
           </div>

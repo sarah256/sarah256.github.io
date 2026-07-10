@@ -13,6 +13,7 @@ export default function App() {
         <Route path="projects" element={<ProgrammingPage />} />
         <Route path="programming" element={<Navigate to="/projects" replace />} />
         <Route path="design" element={<DesignPage />} />
+        <Route path="portfolio" element={<Navigate to="/design" replace />} />
         <Route path="resume" element={<ResumePage />} />
       </Route>
     </Routes>
