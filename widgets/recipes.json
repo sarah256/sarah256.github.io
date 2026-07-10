@@ -1,0 +1,22 @@
+{
+    "recipes": [
+        {
+            "name": "Black bean enchiladas",
+            "site_name": "loveandlemons.com",
+            "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2016/12/IMG_2015_04_24_04353-2.jpg",
+            "link": "https://www.loveandlemons.com/vegetarian-enchiladas/",
+            "category": "Vegetarian",
+            "cuisine": "Mexican",
+            "meal": "Dinner"
+        },
+        {
+            "name": "Breakfast burritos",
+            "site_name": "loveandlemons.com",
+            "img_url": "https://cdn.loveandlemons.com/wp-content/uploads/2016/12/IMG_2015_04_24_04353-2.jpg",
+            "link": "https://www.loveandlemons.com/breakfast-burrito/",
+            "category": "Vegetarian",
+            "cuisine": "Mexican",
+            "meal": "Breakfast"
+        }
+    ]
+}

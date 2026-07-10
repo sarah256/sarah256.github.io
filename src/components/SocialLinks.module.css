@@ -1,0 +1,33 @@
+.groupHeader,
+.groupHome {
+  display: flex;
+  align-items: center;
+}
+
+.groupHeader {
+  gap: 0.65rem;
+}
+
+.groupHome {
+  gap: 1.25rem;
+}
+
+.link {
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+.linkHeader {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.linkHome {
+  font-size: 2rem;
+  line-height: 1;
+}

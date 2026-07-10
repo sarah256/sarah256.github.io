@@ -1,0 +1,52 @@
+.hero {
+  margin-bottom: 3rem;
+}
+
+.name {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--color-accent);
+
+}
+
+.tagline {
+  margin: 0 0 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.greeting {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.bio {
+  margin: 0 0 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+@media (max-width: 640px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .greeting {
+    font-size: 2rem;
+  }
+}
