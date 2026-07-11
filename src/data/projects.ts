@@ -46,7 +46,7 @@ export const projects: Project[] = [
     name: 'Estuary',
     role: 'Core Developer',
     type: 'professional',
-    year: 2019,
+    year: 2020,
     description:
       'Estuary visualizes a build to release pipeline, with a focus on the automation of container rebuilds due to CVEs (security vulnerabilities). Hosted on OpenShift, it gathers data in real time from a message bus.',
     languages: ['Python', 'JavaScript'],
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     name: 'RefEd',
     role: 'Core Developer',
     type: 'professional',
-    year: 2017,
+    year: 2018,
     description:
       'An Android application developed with a team of students and professors as a supplemental educational platform for child refugees, with user profiles keeping track of progress in modules of various subjects.',
     languages: ['Java'],
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     name: 'Spade',
     role: 'Lead Developer',
     type: 'professional',
-    year: 2019,
+    year: 2020,
     description:
       "A Python script that identifies any modules that depend on others by parsing a module's ModuleMD and comparing it to the blacklist of modules. Written for RHEL/Fedora modules.",
     languages: ['Python'],
@@ -134,16 +134,41 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'pmf-analyzer',
+    name: 'Hyphae - PMF Analyzer',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2025,
+    description:
+      'A tool to help you understand whether your product idea has real product-market fit. It combines live competitive intelligence, social demand signals, DynamoDB persistence, and AWS Bedrock AI insights',
+    languages: ['TypeScript'],
+    tools: ['React', 'AI', 'Bedrock', 'DynamoDB', 'AWS', 'Next.js'],
+    links: [{ type: 'github', url: 'https://github.com/sarah256/hyphae', label: 'Code' },
+    ],
+  },
+  {
     id: 'yo-setta-stone',
     name: 'Yo-setta Stone',
     role: 'Lead Developer',
     type: 'hackathon',
-    year: 2017,
+    year: 2019,
     description:
       'This application employs machine learning and natural language processing to evaluate the definition of slang words based on the context of the tweets they are used in.',
     languages: ['Python'],
     tools: ['AI', 'Flask', 'NLTK'],
     links: [{ type: 'github', url: 'https://github.com/sarah256/lingo-learner' }],
+  },
+  {
+    id: 'greenhouse',
+    name: 'Greenhouse',
+    role: 'Lead Developer',
+    type: 'hackathon',
+    year: 2021,
+    description:
+      'A web app to keep track of plant watering schedules',
+    languages: ['JavaScript', 'Python'],
+    tools: ['MongoDB', 'React', 'Flask'],
+    links: [{ type: 'github', url: 'https://github.com/sarah256/greenhouse', label: 'Code' }],
   },
   {
     id: 'museo',
