@@ -147,6 +147,42 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'foxblox',
+    name: 'FoxBlox',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2026,
+    description:
+      'FoxBlox is a modular AI toolkit for small businesses. Users run our prebuilt "blocks" (AI tools) for business strategy, marketing, sales, admin tasks, and more, through a simple web UI.',
+    languages: ['TypeScript', 'Python', 'PostgreSQL'],
+    tools: ['React', 'Next.js', 'Django', 'AI', 'Bedrock', 'AWS', 'Tailwind CSS', 'Shadcn UI'],
+    links: [],
+  },
+  {
+    id: 'momentshare',
+    name: 'MomentShare',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2025,
+    description:
+      'An AI toolkit paired with other useful tooling in order to simplify wedding planning.',
+    languages: ['TypeScript'],
+    tools: ['React', 'Next.js', 'Tailwind CSS', 'AI', 'Bedrock', 'AWS'],
+    links: [{ type: 'website', url: 'https://www.momentshare.co', label: 'Website' }],
+  },
+  {
+    id: 'quizquokka',
+    name: 'QuizQuokka',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2025,
+    description:
+      'A tool to create custom quizzes for fun business marketing.',
+    languages: ['TypeScript'],
+    tools: ['React', 'Tailwind CSS'],
+    links: [{ type: 'website', url: 'https://www.momentshare.co/quizzes/2', label: 'Example Quiz' }],
+  },
+  {
     id: 'yo-setta-stone',
     name: 'Yo-setta Stone',
     role: 'Lead Developer',
@@ -161,7 +197,7 @@ export const projects: Project[] = [
   {
     id: 'greenhouse',
     name: 'Greenhouse',
-    role: 'Lead Developer',
+    role: 'Sole Developer',
     type: 'personal',
     year: 2021,
     description:
