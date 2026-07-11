@@ -1,5 +1,6 @@
 import { accolades, experiences } from '../data/experience'
 import { site } from '../data/site'
+import { trackResumeDownload, trackSocialClick } from '../lib/analytics'
 import { ExperienceBlock } from '../components/ExperienceBlock'
 import { SectionHeader } from '../components/SectionHeader'
 import styles from './ResumePage.module.css'
@@ -57,6 +58,7 @@ export function ResumePage() {
               className={styles.linkedinBtn}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackSocialClick({ platform: 'linkedin', location: 'resume' })}
             >
               View LinkedIn
             </a>
@@ -64,6 +66,7 @@ export function ResumePage() {
               href={site.links.resumePdf}
               className={styles.downloadBtn}
               download="Sarah-Rieger-Resume-2026.pdf"
+              onClick={() => trackResumeDownload()}
             >
               Download Resume
             </a>

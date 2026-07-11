@@ -18,3 +18,14 @@
 .footer a:hover {
   color: var(--color-highlight);
 }
+
+.analytics {
+  margin: 0.65rem 0 0;
+  font-size: 0.68rem;
+  color: var(--color-text-accent);
+}
+
+.analytics a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

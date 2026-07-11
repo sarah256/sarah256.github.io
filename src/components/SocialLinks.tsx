@@ -1,4 +1,5 @@
 import { site } from '../data/site'
+import { trackSocialClick } from '../lib/analytics'
 import styles from './SocialLinks.module.css'
 
 interface SocialLinksProps {
@@ -17,6 +18,7 @@ export function SocialLinks({ variant = 'header' }: SocialLinksProps) {
         target="_blank"
         rel="noreferrer"
         aria-label="GitHub"
+        onClick={() => trackSocialClick({ platform: 'github', location: variant })}
       >
         <i className="fab fa-github" aria-hidden="true" />
       </a>
@@ -26,10 +28,16 @@ export function SocialLinks({ variant = 'header' }: SocialLinksProps) {
         target="_blank"
         rel="noreferrer"
         aria-label="LinkedIn"
+        onClick={() => trackSocialClick({ platform: 'linkedin', location: variant })}
       >
         <i className="fab fa-linkedin" aria-hidden="true" />
       </a>
-      <a href={`mailto:${site.email}`} className={linkClass} aria-label="Email">
+      <a
+        href={`mailto:${site.email}`}
+        className={linkClass}
+        aria-label="Email"
+        onClick={() => trackSocialClick({ platform: 'email', location: variant })}
+      >
         <i className="fas fa-envelope-square" aria-hidden="true" />
       </a>
     </div>

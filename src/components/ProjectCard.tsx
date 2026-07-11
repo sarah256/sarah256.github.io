@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react'
 import type { Project } from '../data/projects'
+import { trackProjectLinkClick } from '../lib/analytics'
 import { TerminalWindow } from './TerminalWindow'
 import { Tags } from './Tag'
 import styles from './ProjectCard.module.css'
@@ -30,6 +31,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 target="_blank"
                 rel="noreferrer"
                 title={link.label}
+                onClick={() =>
+                  trackProjectLinkClick({
+                    projectId: project.id,
+                    projectName: project.name,
+                    linkType: link.type,
+                    linkLabel: link.label ?? linkLabels[link.type],
+                    url: link.url,
+                  })
+                }
               >
                 {link.label ?? linkLabels[link.type]}
                 <ExternalLink className={styles.linkIcon} aria-hidden="true" />
