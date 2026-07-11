@@ -135,7 +135,7 @@ export const projects: Project[] = [
   },
   {
     id: 'pmf-analyzer',
-    name: 'Hyphae - PMF Analyzer',
+    name: 'Hyphae',
     role: 'Sole Developer',
     type: 'personal',
     year: 2025,
@@ -162,7 +162,7 @@ export const projects: Project[] = [
     id: 'greenhouse',
     name: 'Greenhouse',
     role: 'Lead Developer',
-    type: 'hackathon',
+    type: 'personal',
     year: 2021,
     description:
       'A web app to keep track of plant watering schedules',
