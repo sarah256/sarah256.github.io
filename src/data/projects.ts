@@ -100,7 +100,7 @@ export const projects: Project[] = [
     name: 'AI News Roundup',
     role: 'Sole Developer',
     type: 'personal',
-    year: 2025,
+    year: 2026,
     description:
       'Uses Claude / Anthropic API to process AI and tech newsletter emails and generate a weekly roundup spreadsheet with categorized, importance-rated updates.',
     languages: ['Python'],

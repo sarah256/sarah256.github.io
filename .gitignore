@@ -26,6 +26,10 @@
 
 # misc
 /.sass-cache
+# environment variables (never commit secrets)
+.env
+.env.*
+!.env.example
 /connect.lock
 /coverage
 /libpeerconnection.log
