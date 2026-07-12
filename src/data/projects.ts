@@ -183,6 +183,18 @@ export const projects: Project[] = [
     links: [{ type: 'website', url: 'https://www.momentshare.co/quizzes/2', label: 'Example Quiz' }],
   },
   {
+    id: 'drawing-refs',
+    name: 'Drawing Refs Generator',
+    role: 'Sole Developer',
+    type: 'personal',
+    year: 2026,
+    description:
+      'Timed drawing reference and inspiration tool inspired by Line of Action. Configure 1–4 blocks with Pinterest boards, word lists, and color palettes, then run a session with pause / resume / back / forward controls.',
+    languages: ['TypeScript'],
+    tools: ['React', 'Tailwind CSS'],
+    links: [{ type: 'code', url: 'https://github.com/sarah256/drawing-insp-generator', label: 'Code' }],
+  },
+  {
     id: 'yo-setta-stone',
     name: 'Yo-setta Stone',
     role: 'Lead Developer',
