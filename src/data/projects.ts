@@ -192,7 +192,10 @@ export const projects: Project[] = [
       'Timed drawing reference and inspiration tool inspired by Line of Action. Configure 1–4 blocks with Pinterest boards, word lists, and color palettes, then run a session with pause / resume / back / forward controls.',
     languages: ['TypeScript'],
     tools: ['React', 'Tailwind CSS'],
-    links: [{ type: 'github', url: 'https://github.com/sarah256/drawing-insp-generator', label: 'Code' }],
+    links: [
+      { type: 'website', url: '/drawing-refs/', label: 'Live app' },
+      { type: 'github', url: 'https://github.com/sarah256/drawing-insp-generator', label: 'Code' },
+    ],
   },
   {
     id: 'yo-setta-stone',

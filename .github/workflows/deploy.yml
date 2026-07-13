@@ -20,17 +20,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/checkout@v4
+        with:
+          repository: sarah256/drawing-insp-generator
+          path: drawing-insp-generator
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - run: npm ci
-      - run: npm run build
+      - name: Build portfolio
+        run: npm ci && npm run build
         env:
           VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
           VITE_POSTHOG_HOST: ${{ secrets.VITE_POSTHOG_HOST }}
-      - run: cp -r img img2 CNAME dist/
+
+      - name: Build drawing refs app
+        working-directory: drawing-insp-generator
+        run: npm ci && npm run build
+        env:
+          VITE_BASE_PATH: /drawing-refs/
+
+      - name: Combine site artifacts
+        run: |
+          cp -r img img2 CNAME dist/
+          mkdir -p dist/drawing-refs
+          cp -r drawing-insp-generator/dist/* dist/drawing-refs/
+          cp drawing-insp-generator/dist/index.html dist/drawing-refs/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
