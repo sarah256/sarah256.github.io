@@ -41,6 +41,7 @@ jobs:
         run: npm ci && npm run build
         env:
           VITE_BASE_PATH: /drawing-refs/
+          VITE_PINTEREST_API_URL: ${{ secrets.VITE_PINTEREST_API_URL }}
 
       - name: Combine site artifacts
         run: |
