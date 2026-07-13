@@ -8,6 +8,24 @@ export interface Experience {
   tools: string[]
 }
 
+export const resumeBio =
+  "Brooklyn-based software engineer focused on product-led development — from early ideation through implementation and launch. I care about how systems are built and how they fit a broader strategic vision."
+
+export const skillGroups: { label: string; items: string[] }[] = [
+  {
+    label: 'Languages',
+    items: ['TypeScript', 'Python', 'JavaScript', 'SQL', 'Java', 'HTML/CSS'],
+  },
+  {
+    label: 'Frameworks & tools',
+    items: ['React', 'Django', 'AWS', 'Docker', 'Pandas', 'Git', 'Node.js'],
+  },
+  {
+    label: 'Focus areas',
+    items: ['Product engineering', 'Team leadership', 'AI tooling', 'Platform reliability'],
+  },
+]
+
 export const experiences: Experience[] = [
   {
     id: 'jellyfish',

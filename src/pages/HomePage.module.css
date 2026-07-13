@@ -1,15 +1,17 @@
 .hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .name {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.05;
   color: var(--color-accent);
-
 }
 
 .tagline {
@@ -20,10 +22,14 @@
 }
 
 .about {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2rem;
-  align-items: start;
+  display: block;
+}
+
+.avatar {
+  width: 140px;
+  height: auto;
+  image-rendering: pixelated;
+  flex-shrink: 0;
 }
 
 .greeting {
@@ -37,13 +43,25 @@
   margin: 0 0 1.5rem;
   font-size: 1.15rem;
   line-height: 1.7;
-  max-width: 52ch;
+}
+
+.highlight {
+  background: color-mix(in srgb, var(--color-accent) 26%, transparent);
+  color: inherit;
+  font-weight: 600;
+  padding: 0.05em 0.25em;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 @media (max-width: 640px) {
-  .about {
-    grid-template-columns: 1fr;
+  .hero {
     gap: 1rem;
+  }
+
+  .avatar {
+    width: 96px;
   }
 
   .greeting {

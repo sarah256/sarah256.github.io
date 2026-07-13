@@ -29,29 +29,32 @@
 }
 
 .grid {
-  column-count: 3;
-  column-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
 }
 
 @media (max-width: 900px) {
   .grid {
-    column-count: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 560px) {
   .grid {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
 
 .card {
-  break-inside: avoid;
-  margin-bottom: 1.25rem;
+  margin: 0;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   overflow: hidden;
   transition: border-color 0.2s, transform 0.2s;
+  content-visibility: auto;
+  contain-intrinsic-size: 280px;
 }
 
 .card:hover {
@@ -59,9 +62,21 @@
   transform: translateY(-2px);
 }
 
+.imageWrap {
+  background: color-mix(in srgb, var(--color-border) 45%, var(--color-surface));
+  min-height: 8rem;
+}
+
 .image {
   width: 100%;
+  height: auto;
   display: block;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.imageLoaded {
+  opacity: 1;
 }
 
 .meta {
