@@ -58,7 +58,7 @@ export const experiences: Experience[] = [
     id: 'bhacks',
     company: 'BostonHacks',
     title: 'Organizer/Infrastructure Engineer',
-    dates: 'September 2017 – Present',
+    dates: 'September 2017 – May 2020',
     bullets: [
       'Assisted in the development and development infrastructure needs of the hackathon team, and general organizational needs',
       'Developed a Node.js app to assist in the judging process',

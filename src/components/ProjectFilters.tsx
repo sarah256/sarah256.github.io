@@ -1,5 +1,6 @@
 import type { Project, ProjectType } from '../data/projects'
 import { getProjectLanguages, getProjectTools, projectTypes } from '../data/projects'
+import { trackButtonClick } from '../lib/analytics'
 import { ActiveFilterBadges, MultiSelect } from '@/components/ui/multi-select'
 import { Button } from '@/components/ui/button'
 import {
@@ -120,7 +121,10 @@ export function ProjectFilters({ filters, onChange }: ProjectFiltersProps) {
             variant="ghost"
             size="sm"
             className="h-9 shrink-0 font-mono text-xs text-muted-foreground"
-            onClick={() => onChange(defaultProjectFilters)}
+            onClick={() => {
+              trackButtonClick({ name: 'clear_project_filters', location: 'projects' })
+              onChange(defaultProjectFilters)
+            }}
           >
             clear all
           </Button>

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { designCategories, designWorks, type DesignCategory } from '../data/designWorks'
+import { trackDesignFilterClick } from '../lib/analytics'
 import styles from './DesignGallery.module.css'
 
 export function DesignGallery() {
@@ -18,7 +19,10 @@ export function DesignGallery() {
             key={category.id}
             type="button"
             className={`${styles.filterBtn} ${active === category.id ? styles.filterBtnActive : ''}`}
-            onClick={() => setActive(category.id)}
+            onClick={() => {
+              trackDesignFilterClick({ category: category.id })
+              setActive(category.id)
+            }}
           >
             {category.label}
           </button>

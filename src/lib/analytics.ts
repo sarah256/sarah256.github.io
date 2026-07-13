@@ -5,6 +5,22 @@ function capture(event: string, properties?: Record<string, string | number | bo
   posthog.capture(event, properties)
 }
 
+export function trackButtonClick(properties: {
+  name: string
+  location: string
+  [key: string]: string | number | boolean | string[]
+}) {
+  capture('button_clicked', properties)
+}
+
+export function trackNavClick(properties: { path: string; label: string }) {
+  capture('nav_clicked', properties)
+}
+
+export function trackDesignFilterClick(properties: { category: string }) {
+  capture('design_filter_clicked', properties)
+}
+
 export function trackResumeDownload() {
   capture('resume_downloaded')
 }

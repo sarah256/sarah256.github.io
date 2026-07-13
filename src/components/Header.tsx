@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { navItems, site } from '../data/site'
+import { trackButtonClick, trackNavClick } from '../lib/analytics'
 import styles from './Header.module.css'
 import { SocialLinks } from './SocialLinks'
 
@@ -9,7 +10,14 @@ export function Header() {
 
   return (
     <header className={styles.header}>
-      <NavLink to="/" className={styles.brand} onClick={() => setMenuOpen(false)}>
+      <NavLink
+        to="/"
+        className={styles.brand}
+        onClick={() => {
+          trackNavClick({ path: '/', label: 'brand' })
+          setMenuOpen(false)
+        }}
+      >
         {site.name}
       </NavLink>
 
@@ -18,7 +26,14 @@ export function Header() {
         className={styles.menuBtn}
         aria-expanded={menuOpen}
         aria-label="Toggle navigation"
-        onClick={() => setMenuOpen((open) => !open)}
+        onClick={() => {
+          const nextOpen = !menuOpen
+          trackButtonClick({
+            name: nextOpen ? 'menu_open' : 'menu_close',
+            location: 'header',
+          })
+          setMenuOpen(nextOpen)
+        }}
       >
         {menuOpen ? 'close' : 'menu'}
       </button>
@@ -32,7 +47,10 @@ export function Header() {
             className={({ isActive }) =>
               `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
             }
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              trackNavClick({ path: item.path, label: item.label })
+              setMenuOpen(false)
+            }}
           >
             {item.label}
           </NavLink>

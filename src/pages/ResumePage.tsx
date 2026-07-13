@@ -1,6 +1,6 @@
 import { accolades, experiences } from '../data/experience'
 import { site } from '../data/site'
-import { trackResumeDownload, trackSocialClick } from '../lib/analytics'
+import { trackButtonClick, trackResumeDownload, trackSocialClick } from '../lib/analytics'
 import { ExperienceBlock } from '../components/ExperienceBlock'
 import { SectionHeader } from '../components/SectionHeader'
 import styles from './ResumePage.module.css'
@@ -23,7 +23,19 @@ export function ResumePage() {
               {accolade.watchLink && (
                 <li>
                   Watch{' '}
-                  <a href={accolade.watchLink.url} target="_blank" rel="noreferrer">
+                  <a
+                    href={accolade.watchLink.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() =>
+                      trackButtonClick({
+                        name: 'accolade_watch_link',
+                        location: 'resume',
+                        label: accolade.watchLink!.label,
+                        url: accolade.watchLink!.url,
+                      })
+                    }
+                  >
                     {accolade.watchLink.label}
                   </a>
                 </li>
@@ -47,7 +59,17 @@ export function ResumePage() {
             <ul className={styles.tocList}>
               {experiences.map((experience) => (
                 <li key={experience.id}>
-                  <a href={`#${experience.id}`} className={styles.tocLink}>
+                  <a
+                    href={`#${experience.id}`}
+                    className={styles.tocLink}
+                    onClick={() =>
+                      trackButtonClick({
+                        name: 'resume_jump_to',
+                        location: 'resume',
+                        company: experience.company,
+                      })
+                    }
+                  >
                     {experience.company}
                   </a>
                 </li>
