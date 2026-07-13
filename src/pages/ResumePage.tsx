@@ -10,7 +10,7 @@ export function ResumePage() {
     <div className={styles.layout}>
       <div className={styles.main}>
         <section id="overview" className={styles.section}>
-          <SectionHeader title="Overview" subtitle="Background and skills" />
+          <SectionHeader title="Overview" />
           <p className={styles.bio}>{resumeBio}</p>
           <div className={styles.skills}>
             {skillGroups.map((group) => (
