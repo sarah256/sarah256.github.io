@@ -160,17 +160,17 @@ export const designWorks: DesignWork[] = [
   },
   {
     "id": 20,
-    "title": "SpareChange Logo Banner",
-    "medium": "Digital",
-    "category": "digital",
-    "src": "/gallery/img2/sc_default-banner.png"
-  },
-  {
-    "id": 21,
     "title": "Pieces",
     "medium": "Mixed media",
     "category": "mixed",
     "src": "/gallery/img2/pieces.jpeg"
+  },
+  {
+    "id": 21,
+    "title": "SpareChange Logo Banner",
+    "medium": "Digital",
+    "category": "digital",
+    "src": "/gallery/img2/sc_default-banner.png"
   },
   {
     "id": 22,
@@ -291,13 +291,13 @@ export const designWorks: DesignWork[] = [
     "category": "digital",
     "src": "/gallery/img2/neptune.png"
   },
-  {
-    "id": 39,
-    "title": "Bloom",
-    "medium": "Oils",
-    "category": "oils",
-    "src": "/gallery/img2/IMG_9872.jpeg"
-  },
+  // {
+  //   "id": 39,
+  //   "title": "Bloom",
+  //   "medium": "Oils",
+  //   "category": "oils",
+  //   "src": "/gallery/img2/IMG_9872.jpeg"
+  // },
   {
     "id": 40,
     "title": "BBNO$ Album Cover",
@@ -321,7 +321,7 @@ export const designWorks: DesignWork[] = [
   },
   {
     "id": 43,
-    "title": "Currently",
+    "title": "Melt",
     "medium": "Acrylic",
     "category": "acrylic",
     "src": "/gallery/img2/IMG_9718.jpeg"

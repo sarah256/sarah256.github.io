@@ -29,32 +29,29 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  align-items: start;
+  column-count: 3;
+  column-gap: 1.25rem;
 }
 
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
   }
 }
 
 @media (max-width: 560px) {
   .grid {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 }
 
 .card {
-  margin: 0;
+  margin: 0 0 1.25rem;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   overflow: hidden;
   transition: border-color 0.2s, transform 0.2s;
-  content-visibility: auto;
-  contain-intrinsic-size: 280px;
+  break-inside: avoid;
 }
 
 .card:hover {
