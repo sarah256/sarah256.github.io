@@ -21,8 +21,12 @@ export const skillGroups: { label: string; items: string[] }[] = [
     items: ['React', 'Django', 'AWS', 'Docker', 'Pandas', 'Git', 'Node.js'],
   },
   {
+    label: 'AI Tooling',
+    items: ['Cursor', 'Claude', 'Bedrock', 'Anthropic API', 'NLTK', 'Model Context Protocol (MCP)', 'ML Classifiers'],
+  },
+  {
     label: 'Focus areas',
-    items: ['Product engineering', 'Team leadership', 'AI tooling', 'Platform reliability'],
+    items: ['Product engineering', 'Team leadership', 'Product strategy', 'Modular development', 'Scalability'],
   },
 ]
 

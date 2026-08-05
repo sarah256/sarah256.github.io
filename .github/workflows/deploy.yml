@@ -42,6 +42,8 @@ jobs:
         env:
           VITE_BASE_PATH: /drawing-refs/
           VITE_PINTEREST_API_URL: ${{ secrets.VITE_PINTEREST_API_URL }}
+          VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
+          VITE_POSTHOG_HOST: ${{ secrets.VITE_POSTHOG_HOST }}
 
       - name: Combine site artifacts
         run: |
